@@ -8,10 +8,20 @@
     --clr-sec-txt: #e5e7eb;
 }
 
+:root {
+    --shadow-color: 207deg 77% 10%;
+    --shadow-elevation-low:
+        0.7px 0.6px 1.1px hsl(var(--shadow-color) / 0.44),
+        2.8px 2.5px 4.4px -2.1px hsl(var(--shadow-color) / 0.52);
+    --shadow-elevation-medium:
+        0.7px 0.6px 1.1px hsl(var(--shadow-color) / 0.62),
+        14.2px 12.3px 22.1px -2.1px hsl(var(--shadow-color) / 0.72);
+}
+
 * {
     margin: 0;
     padding: 0;
-    /* outline: 2px solid red; */
+    /* outline: 2px solid rgb(155, 53, 53); */
 }
 
 body {
@@ -25,8 +35,21 @@ a {
     color: var(--clr-sec-txt);
 }
 
+body::-webkit-scrollbar {
+    width: 6px;
+    background-color: rgba(0, 0, 0, 0);
+    display: none;
+}
+
+body::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background-color: #979797;
+}
+
 .top-box {
-    background-color: var(--clr-navy);
+    /* background-color: var(--clr-navy); */
+    background: rgb(30, 63, 88);
+    background: linear-gradient(90deg, rgb(16, 36, 53) 0%, rgb(26, 59, 85) 100%);
     height: 500px;
     display: flex;
     justify-content: center;
@@ -63,7 +86,6 @@ ul {
 }
 
 .start {
-    /* max-width: 900px; */
     margin: 6rem 0;
     display: flex;
     gap: 3rem;
@@ -93,6 +115,7 @@ ul {
 .start img {
     object-fit: cover;
     border-radius: 10px;
+    box-shadow: var(--shadow-elevation-medium);
 }
 
 .container-2 {
@@ -115,7 +138,7 @@ ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 32px;
+    gap: 48px;
 }
 
 .box {
@@ -128,8 +151,8 @@ ul {
 }
 
 .box img {
-    border: 3px solid var(--clr-acc);
-    border-radius: 15px;
+    border: 4px solid var(--clr-acc);
+    border-radius: 20px;
     aspect-ratio: 1;
     object-fit: cover;
 }
@@ -174,15 +197,16 @@ button {
     align-self: center;
 }
 
-.container-4 {    
+.container-4 {
     flex-basis: 300px;
     display: flex;
+    justify-content: center;
 }
 
 .call-to-action {
-    align-self: center;
-    margin: 100px auto;
-    flex-basis: 1200px;
+    margin: 100px 100px;
+    max-width: 1200px;
+    flex: auto;
     height: 120px;
     border-radius: 5px;
     color: white;

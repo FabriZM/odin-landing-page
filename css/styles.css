@@ -3,16 +3,11 @@
 
 :root {
     --clr-navy: #1F2937;
-    --clr-acc: #3882f6;
+    --clr-acc: #3564af;
     --clr-main-txt: #f9faf8;
     --clr-sec-txt: #e5e7eb;
-}
 
-:root {
     --shadow-color: 207deg 77% 10%;
-    --shadow-elevation-low:
-        0.7px 0.6px 1.1px hsl(var(--shadow-color) / 0.44),
-        2.8px 2.5px 4.4px -2.1px hsl(var(--shadow-color) / 0.52);
     --shadow-elevation-medium:
         0.7px 0.6px 1.1px hsl(var(--shadow-color) / 0.62),
         14.2px 12.3px 22.1px -2.1px hsl(var(--shadow-color) / 0.72);
@@ -28,6 +23,7 @@ body {
     display: flex;
     flex-direction: column;
     font-family: Roboto, Arial, sans-serif;
+    line-height: 1.5;
 }
 
 a {
@@ -88,7 +84,7 @@ ul {
 .start {
     margin: 6rem 0;
     display: flex;
-    gap: 3rem;
+    gap: 2rem;
 }
 
 .start h1 {
@@ -105,6 +101,7 @@ ul {
     display: flex;
     flex-direction: column;
     gap: 6px;
+    align-self: center;
 }
 
 .start div div {
@@ -119,6 +116,7 @@ ul {
 }
 
 .container-2 {
+    margin: 48px 0;
     max-width: 1200px;
     align-self: center;
     flex-basis: 500px;
